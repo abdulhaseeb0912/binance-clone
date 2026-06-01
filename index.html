@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple Binance-inspired cryptocurrency website made with HTML, CSS, and JavaScript.">
+    <title>Binance Inspired Crypto</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="#home" aria-label="Home">
+        <img src="assets/binance-logo.svg" alt="Binance inspired logo">
+      </a>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation">
+        Menu
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#trending">Trending</a>
+        <a href="#markets">Markets</a>
+        <a href="#buy">Buy Crypto</a>
+        <a href="#auth">Login</a>
+      </nav>
+
+      <a class="login-btn" href="#auth">Login</a>
+      <a class="signup-btn" href="#auth">Sign Up</a>
+
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark and light mode">
+        Dark
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-text">
+          <p class="tagline">Crypto exchange project</p>
+          <h1>Buy, trade, and track cryptocurrency</h1>
+          <p>
+            A clean Binance-inspired university web development project using only
+            HTML, CSS, and vanilla JavaScript.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#buy">Buy Crypto</a>
+            <a class="secondary-btn" href="#markets">View Markets</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <img src="assets/coin-btc.svg" alt="Bitcoin">
+            <div>
+              <span>BTC / USDT</span>
+              <strong id="heroPrice">$0.00</strong>
+            </div>
+          </div>
+          <div class="mini-chart" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <p>Live-style prices update every few seconds for demonstration.</p>
+        </div>
+      </section>
+
+      <section class="stats">
+        <article>
+          <strong>350+</strong>
+          <span>Coins listed</span>
+        </article>
+        <article>
+          <strong>24/7</strong>
+          <span>Market access</span>
+        </article>
+        <article>
+          <strong>0.10%</strong>
+          <span>Sample fee</span>
+        </article>
+      </section>
+
+      <section class="section" id="trending">
+        <div class="section-title">
+          <p class="tagline">Trending</p>
+          <h2>Popular coins</h2>
+        </div>
+        <div class="coin-grid" id="trendingCoins"></div>
+      </section>
+
+      <section class="section" id="markets">
+        <div class="section-title">
+          <p class="tagline">Markets</p>
+          <h2>Market overview</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>24h Change</th>
+                <th>Market Cap</th>
+              </tr>
+            </thead>
+            <tbody id="marketTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section buy-section" id="buy">
+        <div class="section-title">
+          <p class="tagline">Calculator</p>
+          <h2>Buy crypto</h2>
+          <p>Enter an INR amount and choose a coin to estimate how much crypto you receive.</p>
+        </div>
+
+        <form class="buy-card" id="buyForm">
+          <label for="amountInput">Amount in INR</label>
+          <input id="amountInput" type="number" min="0" value="5000">
+
+          <label for="coinSelect">Choose coin</label>
+          <select id="coinSelect"></select>
+
+          <div class="result-box">
+            <span>You receive</span>
+            <strong id="resultText">0 BTC</strong>
+          </div>
+
+          <button class="primary-btn" type="submit">Calculate</button>
+        </form>
+      </section>
+
+      <section class="section auth-section" id="auth">
+        <div class="section-title">
+          <p class="tagline">Account</p>
+          <h2>Login or create an account</h2>
+          <p>This is a front-end demo form. It does not store real user data.</p>
+        </div>
+
+        <div class="auth-card">
+          <div class="auth-tabs">
+            <button class="active" id="loginTab" type="button">Login</button>
+            <button id="signupTab" type="button">Sign Up</button>
+          </div>
+
+          <form class="auth-form" id="loginForm">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" type="email" placeholder="example@email.com">
+
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" type="password" placeholder="Enter password">
+
+            <button class="primary-btn" type="submit">Login</button>
+          </form>
+
+          <form class="auth-form hidden" id="signupForm">
+            <label for="signupName">Full name</label>
+            <input id="signupName" type="text" placeholder="Your name">
+
+            <label for="signupEmail">Email</label>
+            <input id="signupEmail" type="email" placeholder="example@email.com">
+
+            <label for="signupPassword">Password</label>
+            <input id="signupPassword" type="password" placeholder="Create password">
+
+            <button class="primary-btn" type="submit">Create Account</button>
+          </form>
+
+          <p class="form-message" id="authMessage"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <img src="assets/binance-logo.svg" alt="Binance inspired logo">
+        <p>This is a student project inspired by Binance. It is not connected to real trading.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#trending">Trending</a>
+        <a href="#markets">Markets</a>
+        <a href="#buy">Buy Crypto</a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
