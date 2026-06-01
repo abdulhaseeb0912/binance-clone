@@ -5,10 +5,6 @@ A Binance-inspired cryptocurrency trading website developed using HTML, CSS, and
 ## Features
 
 * Responsive Navigation Bar
-* what is the differnce between mine and this aha/
-* User Registration (Sign Up)
-* User Authentication (Login)
-* Form Validation for Sign Up and Login
 * Hero Section
 * Trending Cryptocurrency Section
 * Cryptocurrency Market Table
