@@ -1,7 +1,6 @@
 # Binance Clone
 
 A Binance-inspired cryptocurrency trading website developed using HTML, CSS, and JavaScript.
-This project was created as part of a university web development project to demonstrate front-end design, responsive layouts, and interactive user interface features.
 
 ## Features
 
@@ -63,8 +62,7 @@ This project helped in understanding:
 * Advanced Trading Dashboard
 * Portfolio Tracking Features
 
-## Author
+## License
 
-**Abdul Haseeb**
+This project is for learning and personal use only.
 
-University Web Development Project
